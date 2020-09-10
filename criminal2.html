@@ -8,17 +8,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
 
-<link rel="stylesheet" href="css/cirminal.css" />
-<script src="https://kit.fontawesome.com/2d810d4f39.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="css/cirminal.css" />
+    <script src="https://kit.fontawesome.com/2d810d4f39.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    
+ 
         <div class="row" style="margin: 100px 0;">
             <div class="col-md-6">
                 
@@ -65,28 +64,33 @@
                       
                       <!-- table body -->
                       <tbody>
-                        <tr id="link1">
+                        <tr onclick="myClick(0);" data-id="0" data-lat="41.6293303" data-lng="48.6559151">
                           <td>Freddy Krueger</td>
                           <td class="text-right">122</td>
                           <td class="text-right">isi acilib <a href="criminalInfo.html" style="margin: 0 0 0 7px;"><i class="fa fa-info-circle"></i></a></td>
 
                         </tr>
-                        <tr id="link2">
+                        <tr  onclick="myClick(1);" data-id="1" data-lat="40.5765249" data-lng="49.6068189">
                           <td>Clint Eastwood</td>
                           <td class="text-right">62</td>
                           <td class="text-right">isi acilib <a href="criminalInfo.html" style="margin: 0 0 0 7px;"><i class="fa fa-info-circle"></i></a></td>
                         </tr>
-                        <tr id="link3">
+                        <tr  onclick="myClick(2);" data-id="2" data-lat="40.5416554," data-lng="49.661529">
                           <td>Peter Parker</td>
                           <td class="text-right">22</td>
                           <td class="text-right">isi acilib <a href="criminalInfo.html" style="margin: 0 0 0 7px;"><i class="fa fa-info-circle"></i></a></td>
                         </tr>
-                        <tr id="link4">
+                        <tr  onclick="myClick(3);" data-id="3" data-lat="40.5358596" data-lng="49.6939911">
                           <td>Bruce Wayne</td>
                           <td class="text-right">42</td>
                           <td class="text-right">isi acilib <a href="criminalInfo.html" style="margin: 0 0 0 7px;"><i class="fa fa-info-circle"></i></a></td>
                         </tr>
-                        <tr id="link5">
+                        <tr  onclick="myClick(4);" data-id="3" data-lat="40.5358596" data-lng="49.6939911">
+                          <td>Bruce Wayne</td>
+                          <td class="text-right">42</td>
+                          <td class="text-right">isi acilib <a href="criminalInfo.html" style="margin: 0 0 0 7px;"><i class="fa fa-info-circle"></i></a></td>
+                        </tr>
+                        <!-- <tr id="link5">
                           <td>Jackie Chan</td>
                           <td class="text-right">32</td>
                           <td class="text-right">isi baglanib <a href="criminalInfo.html" style="margin: 0 0 0 7px;"><i class="fa fa-info-circle"></i></a></td>
@@ -174,13 +178,13 @@
                             <td>Quluzade Ilkin </td>
                             <td  class="text-right">123.1</td>
                             <td  class="text-right">Isi baglanib <a href="criminalInfo.html" style="margin: 0 0 0 7px;"><i class="fa fa-info-circle"></i></a></td>
-                        </tr>
+                        </tr> -->
                       </tbody>
                     </table>
                   </div>
             </div>
             <div class="col-md-6" style="margin: 17px 0;">
-                <div id="map_canvas" style="height:100vh "></div>
+                <div id="map" style="height:100vh "></div>
 
             </div>
         </div>
@@ -188,14 +192,15 @@
 
 
 
+    
     <script src="js/jquery.js"></script>
     <script src="js/moment.js"></script>
     <script src="js/bootstrap.js"></script>
     <!-- <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeBBmgAkyAN_QKjAVOiP_kWZ_eQdadeI&amp;callback=initMap&amp;libraries=places"></script> -->
-    <script type="text/javascript"
+    <!-- <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeBBmgAkyAN_QKjAVOiP_kWZ_eQdadeI&callback=initMap&libraries=places&callback=initAutocomplete">
-        </script>
+        </script> -->
     <script src="js/owl-carousel.js"></script>
     <script src="js/blur-area.js"></script>
     <script src="js/icheck.js"></script>
@@ -216,137 +221,15 @@
     <script src="js/serchbar.js"></script>
     <script src="./js/dynamitable.jquery.min.js"></script>
     <script src="./js/gulpfile.js"></script>
-    <script>
-        var marker;
-var map;
 
-$("#link1").click(function(){
-    changeMarkerPos(41.6293303, 48.6559151);
-});
-
-$("#link2").click(function(){
-    changeMarkerPos(40.5765249,49.6068189);
-});
-
-$("#link3").click(function(){
-    changeMarkerPos(40.5416554,49.661529);
-});
-
-$("#link4").click(function(){
-    changeMarkerPos(40.5358596,49.6939911);
-});
-
-$("#link5").click(function(){
-    changeMarkerPos(40.5224538,49.7272991);
-});
-
-
-$("#link6").click(function(){
-    changeMarkerPos(40.5168889,49.7181545);
-});
-
-$("#link7").click(function(){
-    changeMarkerPos(40.5103862,49.7047387);
-});
-
-$("#link8").click(function(){
-    changeMarkerPos(40.467964,49.7212496);
-});
-
-$("#link9").click(function(){
-    changeMarkerPos(40.4525872,49.7083887);
-});
-
-$("#link10").click(function(){
-    changeMarkerPos(40.4045308,49.7673549);
-});
-
-
-$("#link11").click(function(){
-    changeMarkerPos(40.3709169,49.7259393);
-});
-
-$("#link12").click(function(){
-    changeMarkerPos(40.3845335,49.7760059);
-});
-
-$("#link13").click(function(){
-    changeMarkerPos(40.3753534,49.7999981);
-});
-
-$("#link14").click(function(){
-    changeMarkerPos(40.3742593,49.8325239);
-});
-$("#link15").click(function(){
-    changeMarkerPos(40.3773109,49.8420525);
-});
-
-$("#link16").click(function(){
-    changeMarkerPos(40.3792933,49.8439547);
-});
-
-$("#link17").click(function(){
-    changeMarkerPos(40.358714,49.8264068);
-});
-
-$("#link18").click(function(){
-    changeMarkerPos(40.3515453,49.8188204);
-});
-
-$("#link19").click(function(){
-    changeMarkerPos(40.3392034,49.791071);
-});
-
-$("#link20").click(function(){
-    changeMarkerPos(40.3392034,49.801071);
-});
-
-function initialize() {
-    var styles = [{
-        stylers: [{
-            saturation: -100
-        }]
-    }];
-    var styledMap = new google.maps.StyledMapType(styles, {
-        name: "Styled Map"
-    });
-    var mapProp = {
-        center: new google.maps.LatLng(40.3466627,47.7146144),
-        zoom: 14,
-        panControl: false,
-        zoomControl: false,
-        mapTypeControl: false,
-        scaleControl: true,
-        streetViewControl: false,
-        overviewMapControl: false,
-        rotateControl: true,
-        scrollwheel: false,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    map = new google.maps.Map(document.getElementById("map_canvas"), mapProp);
-  
-    map.mapTypes.set('map_style', styledMap);
-    map.setMapTypeId('map_style')
-
-    marker = new google.maps.Marker({
-        position: new google.maps.LatLng(40.3466627,47.7146144),
-        animation: google.maps.Animation.DROP,
-        icon: 'https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/location-24-32.png',
-    });
-  
-    marker.setMap(map);
-    map.panTo(marker.position);
-}
-
-function changeMarkerPos(lat, lon){
-    myLatLng = new google.maps.LatLng(lat, lon)
-    marker.setPosition(myLatLng);
-    map.panTo(myLatLng);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-
+    
+    
+      <!-- Replace following script src -->
+      <script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js"></script>
+      <script defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeBBmgAkyAN_QKjAVOiP_kWZ_eQdadeI&callback=initMap">
+      </script>
+<script src="./js/cirminal.js"></script>
 </body>
 
 <!-- Mirrored from remtsoy.com/tf_templates/tf-bookify-demo/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jul 2018 07:14:33 GMT -->

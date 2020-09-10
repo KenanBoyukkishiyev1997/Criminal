@@ -1,0 +1,15 @@
+.filtering{
+    padding: 0.5rem 1rem;
+    color: #fff;
+    border-radius: 16px;
+    margin: 0 0 0 7px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+
+
+.filtering:hover{
+    color: #fff;
+    text-decoration: none;
+}
