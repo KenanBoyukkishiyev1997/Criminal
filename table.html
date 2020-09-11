@@ -9,11 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" />
-    <link rel="stylesheet" href="css/font-awesome.css" />
-    <link rel="stylesheet" href="css/lineicons.css" />
-    <link rel="stylesheet" href="css/weather-icons.css" />
     <link rel="stylesheet" href="css/cirminal.css" />
-    <link rel="stylesheet" href="css/styles.css" />
     <script src="https://kit.fontawesome.com/2d810d4f39.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -52,18 +48,13 @@
         </div>
         <div class="table-responsive" style="margin-top: 50px ;">
 
-            <!-- Initialization 
-                                * js-dynamitable => dynamitable trigger (table)
-                                -->
+
             <table class="js-dynamitable     table table-bordered">
 
                 <!-- table heading -->
                 <thead>
 
-                    <!-- Sortering
-                                        * js-sorter-asc => ascending sorter trigger
-                                        * js-sorter-desc => desending sorter trigger
-                                        -->
+
                     <tr>
                         <th>Ad , Soyad </th>
                         <th>Madde </th>
@@ -71,9 +62,7 @@
                         <th>Filter </th>
                     </tr>
 
-                    <!-- Filtering
-                                        * js-filter => filter trigger (input, select)
-                                        -->
+
                     <tr>
                         <th>
                             <!-- input filter -->
@@ -99,61 +88,66 @@
                 </thead>
 
                 <!-- table body -->
-                <tbody>
+                <tbody id="myTable">
                     <tr>
                         <td>Freddy Krueger</td>
                         <td class="text-right">122</td>
                         <td class="text-right">isi acilib </td>
                         <td class="text-center">
-                            <a class="filtering " style="background-color: #007bff;" href="#"><i class="fa fa-info-circle"></i> Bax</a>
+                            <a class="filtering " style="background-color: #007bff;" href="#"><i
+                                    class="fa fa-info-circle"></i> Bax</a>
                             <a class="filtering" href="#" style="background-color: #ffc107;"><i class="fas fa-edit"></i>
                                 Deyismek</a>
                             <a class="filtering" href="#" style="background-color: #dc3545;"><i
                                     class="fas fa-trash"></i> Sil</a>
                         </td>
                     </tr>
-                    <tr >
+                    <tr>
                         <td>Clint Eastwood</td>
                         <td class="text-right">62</td>
                         <td class="text-right">isi acilib </td>
                         <td class="text-center">
-                            <a class="filtering " style="background-color: #007bff;" href="#"><i class="fa fa-info-circle"></i> Bax</a>
+                            <a class="filtering " style="background-color: #007bff;" href="#"><i
+                                    class="fa fa-info-circle"></i> Bax</a>
                             <a class="filtering" href="#" style="background-color: #ffc107;"><i class="fas fa-edit"></i>
                                 Deyismek</a>
                             <a class="filtering" href="#" style="background-color: #dc3545;"><i
                                     class="fas fa-trash"></i> Sil</a>
                         </td>
                     </tr>
-                    <tr >
+                    <tr>
                         <td>Peter Parker</td>
                         <td class="text-right">22</td>
                         <td class="text-right">isi acilib </td>
                         <td class="text-center">
-                            <a class="filtering " style="background-color: #007bff;" href="#"><i class="fa fa-info-circle"></i> Bax</a>
+                            <a class="filtering " style="background-color: #007bff;" href="#"><i
+                                    class="fa fa-info-circle"></i> Bax</a>
                             <a class="filtering" href="#" style="background-color: #ffc107;"><i class="fas fa-edit"></i>
                                 Deyismek</a>
                             <a class="filtering" href="#" style="background-color: #dc3545;"><i
                                     class="fas fa-trash"></i> Sil</a>
                         </td>
                     </tr>
-                    <tr >
+                    <tr>
                         <td>Bruce Wayne</td>
                         <td class="text-right">42</td>
                         <td class="text-right">isi acilib </td>
                         <td class="text-center">
-                            <a class="filtering " style="background-color: #007bff;" href="#"><i class="fa fa-info-circle"></i> Bax</a>
+                            <a class="filtering " style="background-color: #007bff;" href="#"><i
+                                    class="fa fa-info-circle"></i> Bax</a>
                             <a class="filtering" href="#" style="background-color: #ffc107;"><i class="fas fa-edit"></i>
                                 Deyismek</a>
                             <a class="filtering" href="#" style="background-color: #dc3545;"><i
                                     class="fas fa-trash"></i> Sil</a>
                         </td>
                     </tr>
-                    <tr >
+                    <tr>
                         <td>Bruce Wayne</td>
                         <td class="text-right">42</td>
                         <td class="text-right">isi acilib </td>
                         <td class="text-center">
-                            <a class="filtering " style="background-color: #007bff;" href="#"><i class="fa fa-info-circle"></i> Bax</a>
+                            <a class="filtering " style="background-color: #007bff;" href="#"><i
+                                    class="fa fa-info-circle"></i> Bax</a>
                             <a class="filtering" href="#" style="background-color: #ffc107;"><i class="fas fa-edit"></i>
                                 Deyismek</a>
                             <a class="filtering" href="#" style="background-color: #dc3545;"><i
@@ -259,44 +253,42 @@
 
 
     <script src="js/jquery.js"></script>
-    <script src="js/moment.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <!-- <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeBBmgAkyAN_QKjAVOiP_kWZ_eQdadeI&amp;callback=initMap&amp;libraries=places"></script> -->
-    <!-- <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeBBmgAkyAN_QKjAVOiP_kWZ_eQdadeI&callback=initMap&libraries=places&callback=initAutocomplete">
-        </script> -->
-    <script src="js/owl-carousel.js"></script>
-    <script src="js/blur-area.js"></script>
-    <script src="js/icheck.js"></script>
-    <script src="js/gmap.js"></script>
-    <script src="js/magnific-popup.js"></script>
-    <script src="js/ion-range-slider.js"></script>
-    <script src="js/sticky-kit.js"></script>
-    <script src="js/smooth-scroll.js"></script>
-    <script src="js/fotorama.js"></script>
-    <script src="js/bs-datepicker.js"></script>
-    <script src="js/typeahead.js"></script>
-    <script src="js/quantity-selector.js"></script>
-    <script src="js/countdown.js"></script>
-    <script src="js/window-scroll-action.js"></script>
-    <script src="js/fitvid.js"></script>
-    <script src="js/youtube-bg.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/serchbar.js"></script>
+
     <script src="./js/dynamitable.jquery.min.js"></script>
-    <script src="./js/gulpfile.js"></script>
 
+    <script>
+        var myArray = []
+        
+    
+        $.ajax({
+            method:'GET',
+            url:'./js/data.json',
+            success:function(response){
+                myArray = response.data
+                buildTable(myArray)
+                console.log(myArray)
+            }
+        })
+    
+    
+    
+        function buildTable(data){
+            var table = document.getElementById('myTable')
+    
+            for (var i = 0; i < data.length; i++){
+                var row = `<tr>
+                                <td>${data[i].first_name}</td>
+                                <td class="text-right">${data[i].lat}</td>
+                                <td class="text-right">${data[i].email}</td>
+                          </tr>`
+                table.innerHTML += row
+    
+    
+            }
+        }
+    
+    </script>
 
-
-    <!-- Replace following script src -->
-    <script src="https://unpkg.com/@google/markerclustererplus@5.1.0/dist/markerclustererplus.min.js"></script>
-    <script defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeBBmgAkyAN_QKjAVOiP_kWZ_eQdadeI&callback=initMap">
-        </script>
-    <script src="./js/cirminal.js"></script>
 </body>
-
-<!-- Mirrored from remtsoy.com/tf_templates/tf-bookify-demo/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jul 2018 07:14:33 GMT -->
 
 </html>

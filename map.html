@@ -6,35 +6,35 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
 
 </head>
 
 <style>
     .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
-    width: 100%;
-}
+        width: 100%;
+    }
 </style>
+
 <body>
-    <div class="container">
+    <div class="container-fluid ">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4 mt-5">
                 <form>
                     <div class="form-group">
-                        <label for="">Location</label>
+                        <label for="">Lokatsiya</label>
                         <input class="form-control" type="text" id="us2-address"></div>
                     <div class="form-group">
-                        <label for="">Lat</label>
-                        <input class="form-control" type="text" class="form-control" id="us2-lat"></div>
+                        <input class="form-control" type="hidden" class="form-control" id="us2-lat"></div>
 
                     <div class="form-group">
-                        <label for="">Lng</label>
-                        <input class="form-control" type="text" id="us2-lon">
+                        <input class="form-control" type="hidden" id="us2-lon">
                     </div>
 
 
                     <div class="form-group">
-                        <label for="desc">Description</label>
+                        <label for="desc">Izahat</label>
                         <textarea class="form-control" id="desc" rows="3"></textarea>
                     </div>
 
@@ -46,15 +46,15 @@
                         <option>Mustard</option>
                         <option>Ketchup</option>
                         <option>Relish</option>
-                      </select>
+                    </select>
 
 
-                      <div class="form-group">
-                        <input class="btn btn-primary mt-5" type="submit" value="Send">
+                    <div class="form-group">
+                        <input class="btn btn-primary mt-5 w-100" type="submit" value="Send">
                     </div>
                 </form>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8 pr-0">
 
                 <div class="form-group">
                     <div id="us2" style=" height: 100vh;"></div>
@@ -65,51 +65,22 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
 
-
-    <!-- <script src="./js/cirminal.js"></script> -->
 
     <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeBBmgAkyAN_QKjAVOiP_kWZ_eQdadeI&callback=initMap&libraries=places">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJt-BduR0mI4LbIR_jYDXe9okZNaJVLUY&callback=initMap&libraries=places">
         </script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery-locationpicker/0.1.12/locationpicker.jquery.min.js"></script>
-    <script>
-        $('#us2').locationpicker({
-            location: {
-                latitude: 46.15242437752303,
-                longitude: 2.7470703125
-            },
-            radius: 0,
-            inputBinding: {
-                latitudeInput: $('#us2-lat'),
-                longitudeInput: $('#us2-lon'),
-                radiusInput: $('#us2-radius'),
-                locationNameInput: $('#us2-address')
-            },
-            enableAutocomplete: true,
-            enableAutocompleteBlur: true,
-            autocompleteOptions: {
-                types: ['(places)'],
-            }
-        });
-    </script>
+    <script src="./js/map.js"></script>
 
-    <script>
-        $('select').selectpicker();
-    </script>
+
 </body>
 
 </html>
